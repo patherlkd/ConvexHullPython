@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 import math
-from random import randint
+from random import uniform
 from random import seed
 
 seed(999213)
 
-x = [randint(-30,2) for i in range(50)]
-y = [randint(-10,20) for i in range(50)]
+x = [uniform(-30,2) for i in range(50)]
+y = [uniform(-10,20) for i in range(50)]
 
 points = list(zip(x,y))
 
@@ -96,5 +96,5 @@ def get_boundary(points):
 boundary = get_boundary(points)
 
 plt.plot([row[0] for row in boundary],[row[1] for row in boundary],label='Boundary')
-
+plt.legend()
 plt.show()
